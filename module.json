@@ -1,0 +1,112 @@
+{
+  "name": "memmy",
+  "title": "Aunt Memmy's Compendium",
+  "description": "A simple module used to share compendia.",
+  "author": "Wouter Meuwis",
+  "version": "1.0.0",
+  "minimumCoreVersion": "0.7.5",
+  "compatibleCoreVersion": "0.7.9",
+  "system": "dnd5e",
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "scripts": [],
+  "esmodules": [
+    "scripts/hooks.js"
+  ],
+  "styles": [],
+  "packs": [
+    {
+      "name": "memmy-classes",
+      "label": "Memmy's Classes",
+      "system": "dnd5e",
+      "path": "./packs/memmy-classes.db",
+      "entity": "Item",
+      "module": "Aunt Memmy's Compendium"
+    },
+    {
+      "name": "memmy-class-features",
+      "label": "Memmy's Class Features",
+      "path": "./packs/memmy-class-features.db",
+      "system": "dnd5e",
+      "entity": "Item",
+      "module": "Aunt Memmy's Compendium"
+    },
+    {
+      "name": "memmy-items",
+      "label": "Memmy's Items",
+      "system": "dnd5e",
+      "path": "./packs/memmy-items.db",
+      "entity": "Item",
+      "module": "Aunt Memmy's Compendium"
+    },
+    {
+      "name": "memmy-monster-features",
+      "label": "Memmy's Monster Features",
+      "system": "dnd5e",
+      "path": "./packs/memmy-monster-features.db",
+      "entity": "Item",
+      "module": "Aunt Memmy's Compendium"
+    },
+    {
+      "name": "memmy-monsters",
+      "label": "Memmy's Monsters",
+      "system": "dnd5e",
+      "path": "./packs/memmy-monsters.db",
+      "entity": "Actor",
+      "module": "Aunt Memmy's Compendium"
+    },
+    {
+      "name": "memmy-spells",
+      "label": "Memmy's Spells",
+      "system": "dnd5e",
+      "path": "./packs/memmy-spells.db",
+      "entity": "Item",
+      "module": "Aunt Memmy's Compendium"
+    },
+    {
+      "name": "memmy-macros",
+      "label": "Memmy's Macros",
+      "system": "dnd5e",
+      "path": "./packs/memmy-macros.db",
+      "entity": "Macro",
+      "module": "Aunt Memmy's Compendium"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "compendium-folders",
+      "type": "module",
+      "manifest": "https://raw.githubusercontent.com/earlSt1/vtt-compendium-folders/master/module.json"
+    },
+    {
+      "name": "combat-utility-belt",
+      "type": "module",
+      "manifest": "https://github.com/death-save/combat-utility-belt/releases/latest/download/module.json"
+    },
+    {
+      "name": "dae",
+      "type": "module",
+      "manifest": "https://gitlab.com/tposney/dae/raw/master/package/module.json"
+    },
+    {
+      "name": "midi-qol",
+      "type": "module",
+      "manifest": "https://gitlab.com/tposney/midi-qol/raw/master/package/module.json"
+    },
+    {
+      "name": "itemacro",
+      "type": "module",
+      "manifest": "https://github.com/Kekilla0/Item-Macro/raw/master/module.json"
+    },
+    {
+      "name": "lib-wrapper",
+      "type": "module",
+      "manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/latest/download/module.json"
+    }
+  ]
+}
