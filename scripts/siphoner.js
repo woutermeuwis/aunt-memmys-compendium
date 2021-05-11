@@ -49,7 +49,7 @@ export async function siphonerHealAsync(actor, hitPoints) {
 
 async function HandleArcaneConversionAsync(actor, hitPoints) {
   // Return false if actor has no access to the Arcana Conversion feature
-  if (!hasArcanaConversion())
+  if (!hasArcanaConversion(actor))
     return false;
 
   // We can regain a spell slot of a level equal to one fifth of the hit points regained, rounded down
@@ -119,7 +119,7 @@ async function HandleArcaneConversionAsync(actor, hitPoints) {
 
 function HandleOverheal(actor, overheal) {
 
-  if (!hasOverheal())
+  if (!hasOverheal(actor))
     return;
 
   let tempHitPoints = Math.floor(overheal / 2);
@@ -148,11 +148,11 @@ function getBeyondMortalityDice(actor) {
   };
 }
 
-function hasArcanaConversion() {
+function hasArcanaConversion(actor) {
   return getItemByNameAndType(actor, names.features.arcanaConversion, types.feature)
 }
 
-function hasOverheal() {
+function hasOverheal(actor) {
   return getItemByNameAndType(actor, names.features.overHeal, types.feature)
 }
 

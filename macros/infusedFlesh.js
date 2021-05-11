@@ -6,7 +6,7 @@ if (args[0].tag == "OnUse") {
   let slotsData = memmy.getAllSpellSlots(actor);
 
   // check if any slot available
-  if (slotsData.total <= 0) {
+  if (slotsData.available <= 0) {
     ui.notifications.warn("You have no spell slots available for this feature!");
     return;
   }

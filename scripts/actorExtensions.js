@@ -55,7 +55,7 @@ export function ExpendSpellSlot(actor, id, amountToExpend){
   let available = Math.max(slotData.value - amountToExpend, 0);
   
   var updateData = {};
-  updateData['data.spells.${id}.value'] = available;
+  updateData[`data.spells.${id}.value`] = available;
   actor.update(updateData);
 }
 
@@ -126,35 +126,35 @@ function mapSpellSlot(spellSlotId, spellSlot) {
       level = 1;
       break;
     case "spell2":
-      displayName = '"2st level';
+      displayName = '2nd level';
       level = 2;
       break;
     case "spell3":
-      displayName = "3st level";
+      displayName = "3rd level";
       level = 3;
       break;
     case "spell4":
-      displayName = "4st level";
+      displayName = "4th level";
       level = 4;
       break;
     case "spell5":
-      displayName = "5st level";
+      displayName = "5th level";
       level = 5;
       break;
     case "spell6":
-      displayName = "6st level";
+      displayName = "6th level";
       level = 6;
       break;
     case "spell7":
-      displayName = "7st level";
+      displayName = "7th level";
       level = 7;
       break;
     case "spell8":
-      displayName = "8st level";
+      displayName = "8th level";
       level = 8;
       break;
     case "spell9":
-      displayName = "9st level";
+      displayName = "9th level";
       level = 9;
       break;
   }
