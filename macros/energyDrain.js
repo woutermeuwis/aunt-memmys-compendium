@@ -116,7 +116,7 @@ function executeHeal(die, maxHeal) {
 
   // Heal player
   memmy.siphonerHealAsync(actor, toHeal);
-  
+
   // Create chat message
   memmy.printChatMessage(text);
   return;

@@ -58,7 +58,6 @@ if (args[0].tag === 'OnUse') {
 }
 
 function regainHitDice(dieCount, slotId) {
-    debugger;
     let availableDice = memmy.getAllHitDiceForSiphonerFeature(actor).dice.filter(d => d.used > 0);
     let diceHtml = '';
 
@@ -83,9 +82,6 @@ function regainHitDice(dieCount, slotId) {
         icon: '',
         label: 'Ok',
         callback: html => {
-
-            debugger;
-
             let regained = [];
             let i = 0;
             let total = 0;
@@ -105,12 +101,13 @@ function regainHitDice(dieCount, slotId) {
 
             // do nothing
             if (total == 0)
+                return;
 
-                // validate input
-                if (total > dieCount) {
-                    memmy.warn(`Please select a maximum of ${dieCount} dice!`);
-                    return regainHitDice(dieCount);
-                }
+            // validate input
+            if (total > dieCount) {
+                memmy.warn(`Please select a maximum of ${dieCount} dice!`);
+                return regainHitDice(dieCount);
+            }
 
             // regain hit dice
             regained.forEach((value, index, array) => {
