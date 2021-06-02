@@ -3,10 +3,13 @@
   "title": "Aunt Memmy's Compendium",
   "description": "A simple module used to share compendia.",
   "author": "Wouter Meuwis",
-  "version": "1.0.0",
+  "version": "This is auto replaced",
   "minimumCoreVersion": "0.7.5",
   "compatibleCoreVersion": "0.7.9",
   "system": "dnd5e",
+  "url": "This is auto replaced",
+  "manifest": "This is auto replaced",
+  "download": "This is auto replaced",
   "languages": [
     {
       "lang": "en",
