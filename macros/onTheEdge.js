@@ -31,8 +31,8 @@ if (args[0].tag === "OnUse") {
   // get lock on button
   let lockOnButton = {
     icon: "",
-    label: "Intensify",
-    callback: executeIntensify,
+    label: "Lock On",
+    callback: executeLockOn,
   };
 
   // get thick skin button

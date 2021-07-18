@@ -10,7 +10,7 @@ export function getItemByNameAndType(actor, name, type) {
 }
 
 export function getEffectByName(actor, name) {
-  return actor.effects.entries.find(e=> e.data.label === name);
+  return actor.effects.find(e=> e.data.label === name);
 }
 
 export function getEffectById(actor, id) {

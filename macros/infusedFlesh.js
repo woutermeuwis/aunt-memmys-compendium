@@ -13,7 +13,7 @@ if (args[0].tag == "OnUse") {
 
   // generate html content
   let spellSlotsHtml = ``;
-  for (let slot of spellSlots.slots.filter((s) => s.available > 0)) {
+  for (let slot of  slotsData.slots.filter((s) => s.available > 0)) {
     spellSlotsHtml += `<option value="${slot.id}">${slot.displayName} (${slot.available})</option>`;
   }
   let content = `

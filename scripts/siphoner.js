@@ -17,7 +17,8 @@ export function getAllHitDiceForSiphonerFeature(actor) {
   let dice = getClassItemsFromActor(actor).map(getClassHitDice);
   let bmDice = getBeyondMortalityDice(actor);
 
-  dice.push(bmDice);
+  if(bmDice)
+    dice.push(bmDice);
 
   let total = dice.reduce((acc, val) => acc + val.max, 0);
   let available = dice.reduce((acc, val) => acc + val.available, 0);
@@ -136,8 +137,10 @@ function HandleOverheal(actor, overheal) {
 function getBeyondMortalityDice(actor) {
   let siphoner = getItemByNameAndType(actor, "Siphoner", "class");
   let bm = getItemByNameAndType(actor, "Beyond Mortality", "feat");
-  let uses = bm.data.data.uses;
+  if(!bm)
+    return undefined;
 
+  let uses = bm.data.data.uses;
   return {
     displayName: `${siphoner.data.data.hitDice} [${bm.data.name}]`,
     size: siphoner.data.data.hitDice,

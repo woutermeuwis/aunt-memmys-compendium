@@ -3,9 +3,9 @@ export const names = {
         arcanaConversion: 'Arcana Conversion',
         overHeal: 'Overheal',
         betterWhenBleeding: 'Better when bleeding',
-        bulkUp: 'Bulk up',
+        bulkUp: 'Bulk Up',
         intensify: 'Intensify',
-        lockOn: 'Lock on'
+        lockOn: 'Lock On'
     }
 }
 
